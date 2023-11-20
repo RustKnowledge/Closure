@@ -1,0 +1,3 @@
+Quote: from.book: Fullstack Rust
+>**Understanding closures**
+The tricky bit is how the closure captures variables from the surrounding environ-ment, so let’s take a closer look at this. If the keyword move comes before the argument list then any variables from the environment that the closure uses are actually moved into the closure. This means the closure takes ownership of those variables rather than creating references. This implies that the lifetime of the closure can be longer than its surrounding environment because those variables are moved into the closure. Without the move keyword, variables closed over are actually just references to the surrounding environment.
